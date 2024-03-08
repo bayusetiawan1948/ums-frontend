@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import instance from '../api/main';
 function PelangganForm() {
-  const domisiliData = ['JAK-UT', 'JAK-BAR', 'JAK-SEL', 'JAK-TIM'];
+  const domisiliData = ['JAK-UT', 'JAK-BAR', 'JAK-SEL', 'JAK-TIM']; //default data untuk domisili
   const jekelData = [
+    //default data untuk jenis kelamin
     {
       value: 'PRIA',
       display: 'Pria',

@@ -4,6 +4,7 @@ import instance from '../api/main';
 import { useParams } from 'react-router-dom';
 function BarangForm() {
   const kategori = [
+    // default data untuk kategori
     {
       value: 'ATK',
       display: 'ATK',
@@ -42,7 +43,7 @@ function BarangForm() {
     }, []);
   }
   const handlingMoneyInput = (e) => {
-    const value = formatRupiah(formatRupiahToNumber(e.target.value));
+    const value = formatRupiah(formatRupiahToNumber(e.target.value)); // di reformat menjadi tipe data number setelah itu di ubah menjadi bentuk rupiah string
     setRupiah(value);
   };
   const handlingCreateOrUpdate = async (e) => {
