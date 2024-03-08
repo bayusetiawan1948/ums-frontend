@@ -30,7 +30,7 @@ function Disclosure(props) {
         <div className="flex flex-row justify-center items-center">
           <button
             className="text-red-500 p-1.5 rounded-md hover:bg-red-300 hover:text-white"
-            onClick={() => onClickFunction(id_nota)}
+            onClick={() => onClickFunction(id_nota)} // lifting state up untuk merefresh data sekaligus mengirim data ke server agar data ini di hapus
           >
             <Trash size={22} />
           </button>

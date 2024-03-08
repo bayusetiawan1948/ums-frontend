@@ -31,12 +31,13 @@ function CardBarang(props) {
   );
 }
 
+// button yang akan muncul ketika berada di halaman penjualan / untuk keperluan penjualan
 function ButtonSales(onClickFuntion, kode, nama, kategori, harga) {
   return (
     <button
       className="bg-blue-500 flex items-center justify-center px-4 py-2 rounded-md text-white hover:bg-blue-300"
       onClick={() => {
-        onClickFuntion(kode, nama, kategori, harga, harga, 1);
+        onClickFuntion(kode, nama, kategori, harga, harga, 1); // lifting state untuk menambahkan cart ke data cart parent
       }}
     >
       Tambah
@@ -44,9 +45,11 @@ function ButtonSales(onClickFuntion, kode, nama, kategori, harga) {
   );
 }
 
+// button yang akan muncul ketika berada di halaman barang / untuk keperluan edit atau delete
 function ButtonBarang(kode, onClickFunction) {
   return (
     <div className="flex flex-row justify-center items-center text-white gap-4">
+      {/* di beri komentar karena disiapkan jika ingin melihat secara detail */}
       {/* <Link to="">
         <button className="bg-blue-500 flex justify-center rounded-md p-1.5 hover:bg-blue-300">
           <Eye size={22} />
@@ -59,7 +62,7 @@ function ButtonBarang(kode, onClickFunction) {
       </Link>
       <button
         className="bg-red-500 flex justify-center rounded-md p-1.5 hover:bg-red-300"
-        onClick={() => onClickFunction(kode)}
+        onClick={() => onClickFunction(kode)} // lifting state untuk memberikan id barang kepada parent untuk di hapus nantinya
       >
         <Trash size={22} />
       </button>

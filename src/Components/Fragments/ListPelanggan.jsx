@@ -22,10 +22,12 @@ function ListPelanggan(props) {
             <p className="font-bold">{nama}</p>
             <p className="text-slate-500">{domisili}</p>
           </div>
+          {/* diberikan komentar jika ada keperluan melihat jenis kelamin */}
           {/* <div>PRIA</div> */}
         </div>
       </div>
       <div className="flex flex-row justify-center items-center text-white gap-4">
+        {/* di beri komentar karena disiapkan jika ingin melihat secara detail */}
         {/* <a href="">
           <button className="bg-blue-500 flex justify-center rounded-md p-1.5 hover:bg-blue-300">
             <Eye size={22} />
@@ -38,7 +40,7 @@ function ListPelanggan(props) {
         </Link>
         <button
           className="bg-red-500 flex justify-center rounded-md p-1.5 hover:bg-red-300"
-          onClick={() => handlingConfirmation(id_pelanggan)}
+          onClick={() => handlingConfirmation(id_pelanggan)} // lifting state up untuk merefresh data sekaligus mengirim data ke server agar data ini di hapus
         >
           <Trash size={22} />
         </button>

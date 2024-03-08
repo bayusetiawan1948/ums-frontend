@@ -77,7 +77,7 @@ function CartPenjualan(props) {
                   <button
                     className="bg-red-500 rounded-full p-0.5 text-white"
                     onClick={() => {
-                      onMinusClick(element.id_barang);
+                      onMinusClick(element.id_barang); // lifting state up untuk memberikan id barang kepada parent untuk menambahkan qty pada cart parent
                     }}
                   >
                     <Minus size={32} />
@@ -85,7 +85,7 @@ function CartPenjualan(props) {
                   <button
                     className="bg-green-500 rounded-full p-0.5 text-white"
                     onClick={() => {
-                      onPlusClick(element.id_barang);
+                      onPlusClick(element.id_barang); // lifting state up untuk memberikan id barang kepada parent untuk mengurangkan qty pada cart parent
                     }}
                   >
                     <Plus size={32} />
