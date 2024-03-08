@@ -10,6 +10,7 @@ function Disclosure(props) {
   const { data, onClickedDelete } = props;
   const { id_nota, id_pelanggan, nama_pelanggan, tanggal, subtotal, detail } =
     data;
+  console.log(subtotal);
   const [open, setOpen] = useState(true);
   const handlingOpenClose = () => {
     setOpen(!open);
@@ -65,9 +66,7 @@ function Disclosure(props) {
           </div>
           <div className="px-2 grid gap-2 sm:grid sm:grid-cols-3 sm:gap-12 sm:px-0">
             <p>Subtotal</p>
-            <p className="font-semibold">
-              {formatRupiah(subtotal === undefined)}
-            </p>
+            <p className="font-semibold">{formatRupiah(subtotal)}</p>
           </div>
           <div className="px-2 grid gap-2 sm:grid sm:grid-cols-3 sm:gap-8 sm:px-0">
             <p>Barang</p>
