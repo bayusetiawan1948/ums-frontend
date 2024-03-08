@@ -80,6 +80,7 @@ function BarangForm() {
           name="nama"
           placeholder="Baling baling bambu"
           value={nama}
+          required
           onChange={(e) => {
             setNama(e.target.value);
           }}
@@ -114,6 +115,7 @@ function BarangForm() {
           name="harga"
           id="harga"
           placeholder="Rp.100.000"
+          required
           value={rupiah}
           className="focus:border-orange-500 border-2 border-blue-400 rounded-lg ps-3 py-1 w-full "
           onChange={handlingMoneyInput}

@@ -68,6 +68,7 @@ function PelangganForm() {
           type="text"
           id="nama"
           value={nama}
+          required
           onChange={(e) => {
             setNama(e.target.value);
           }}
